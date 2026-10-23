@@ -74,3 +74,34 @@
  .price small,html[lang=mr] .price small,.region,html[lang=mr] .region{font-size:14px}
  .textbutton,html[lang=mr] .textbutton{font-size:16px}
 }
+
+/* Supporting copy must be readable without pinch zoom. */
+#trip-planner .jp-card-copy small{font-size:18px;line-height:1.85;color:#405b51}
+#trip-planner .jp-hint,#trip-planner .jp-footnote,#trip-planner .jp-extra>p,
+#trip-planner .jp-response,#trip-planner .jp-delivery{font-size:18px;line-height:1.9;color:#405b51}
+#trip-planner .jp-summary-row small,#trip-planner .jp-summary-note,
+#trip-planner .jp-destination small{font-size:17px;line-height:1.85;color:#405b51}
+#trip-planner .jp-summary-row p{font-size:18px;line-height:1.85}
+#trip-planner .jp-summary-row button{font-size:16px!important;min-height:44px!important}
+@media(max-width:1100px){
+ #trip-planner .jp-card-copy strong{font-size:20px;line-height:1.65}
+ #trip-planner .jp-card-copy{padding:16px 13px}
+ #trip-planner .jp-interest img{height:140px}
+ #trip-planner .jp-steps{display:flex;overflow-x:auto;gap:18px;padding:16px;scrollbar-width:thin}
+ #trip-planner .jp-steps button{flex:0 0 auto;flex-direction:row;white-space:nowrap;font-size:16px!important;gap:8px}
+ #trip-planner .jp-steps button span{flex:0 0 32px}
+}
+@media(max-width:600px){
+ html body .heading p,html body .cardbody>p,html body .service p,
+ html body .story p,html body .feature p,html body .hero p,
+ html body .experience-copy p,html body .stay-banner p,
+ html body .stops,html body .notice,html body .season-note,
+ html body .slider-tools p,html body details p,
+ html body .heading.packages-intro .packages-summary{font-size:18px;line-height:1.9}
+ html body .price small,html body .region,html body .finder label,
+ html body .introbar,html body .preview,html body footer p,
+ html body .image-credits p,html body .image-credits summary,
+ html body .gallery figcaption small,html body .discovery-strip span,
+ html body .budget-note,html body .finder-budget small{font-size:16px;line-height:1.85}
+ html body .photo-caption{font-size:17px}
+}
