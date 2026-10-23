@@ -3,3 +3,74 @@
 
 .jp-mobile-summary{display:none}@media(max-width:760px){.jp-mobile-summary{display:block;margin:0 0 25px;padding:14px 17px;background:#eef3e9;border:1px solid #d9e4d2;border-radius:12px}.jp-mobile-summary summary{font-size:16px;font-weight:600}.jp-mobile-summary>div{padding-top:14px}.jp-review{display:none}}
 .jp-summary-row button:disabled{opacity:.45;cursor:default}
+
+/* Comfortable tablet and phone planner: never squeeze the form beside a summary. */
+@media(max-width:1100px){
+ #trip-planner{font-size:18px;line-height:1.8;min-width:0;width:100%}
+ .jp-layout{display:flex;flex-direction:column;gap:24px;padding:28px}
+ .jp-form{width:100%}.jp-summary{display:none}
+ .jp-mobile-summary{display:block;order:2;width:100%;margin:0;padding:18px 20px;background:#f0f5ed;border:1px solid #d1dfd1;border-radius:14px}
+ .jp-mobile-summary summary{font-size:18px;font-weight:600;line-height:1.8;cursor:pointer}
+ .jp-mobile-summary>div{padding-top:12px}
+ .jp-header{padding:30px}.jp-header h2,html[lang=mr] #trip-planner h2{font-size:32px;line-height:1.55}
+ .jp-header p{font-size:18px;line-height:1.85}.jp-header-art{display:none}
+ .jp-kicker{font-size:13px;letter-spacing:.7px;line-height:1.8}
+ .jp-form h3{font-size:28px;line-height:1.65}.jp-hint{font-size:17px;line-height:1.85}
+ .jp-interest-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ .jp-interest{min-width:0;border-radius:14px}.jp-interest img{height:150px}
+ .jp-card-copy{padding:16px}.jp-card-copy strong{font-size:19px;line-height:1.65}
+ .jp-card-copy small{font-size:16px;line-height:1.8;margin-top:7px}
+ .jp-tick{width:32px;height:32px;font-size:20px}
+ .jp-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:16px 20px;gap:8px;overflow:visible}
+ .jp-steps button{flex-direction:column;justify-content:flex-start;text-align:center;white-space:normal;gap:7px;font-size:14px!important;line-height:1.6;min-width:0;padding:4px 0}
+ .jp-steps button span{flex-basis:auto;width:32px;height:32px}
+ .jp-modes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ .jp-modes button{font-size:17px!important;line-height:1.7;padding:12px;min-width:0}
+ .jp-footnote,.jp-extra>p{font-size:16px;line-height:1.9}
+ .jp-response,.jp-delivery{font-size:17px;line-height:1.85}
+ .jp-chip{font-size:17px!important;padding:12px 16px;line-height:1.7}
+ .jp-fields label,.jp-form legend{font-size:18px}
+ .jp-fields input,.jp-fields select,.jp-fields textarea{font-size:18px!important;min-width:0;max-width:100%}
+ .jp-destination strong{font-size:19px}.jp-destination small{font-size:16px}
+ .jp-summary-row small,.jp-summary-note{font-size:15px}
+ .jp-summary-row p{font-size:17px}.jp-summary-row button{font-size:15px!important;min-height:44px!important}
+ .jp-navigation{padding:20px 0 0;margin-top:24px;gap:12px}
+ .jp-navigation>span{font-size:16px}
+ .jp-primary,.jp-back{font-size:18px!important;min-height:50px;padding:12px 22px}
+ #jp-draft{font-size:17px;line-height:1.8}
+}
+@media(max-width:600px){
+ #plan .planwrap{padding:0 14px}
+ .jp-shell{border-radius:20px}
+ .jp-header{padding:26px 22px}.jp-header h2,html[lang=mr] #trip-planner h2{font-size:28px}
+ .jp-layout{padding:24px 18px}
+ .jp-form h3{font-size:25px}
+ .jp-steps{padding:16px 12px;gap:5px}
+ .jp-steps button{font-size:12px!important;line-height:1.65}
+ .jp-interest-grid{gap:12px}.jp-interest img{height:120px}
+ .jp-card-copy{padding:13px 11px}.jp-card-copy strong{font-size:17px}
+ .jp-card-copy small{font-size:15px;line-height:1.75}
+ .jp-fields{grid-template-columns:minmax(0,1fr);gap:20px}
+ .jp-modes button{font-size:16px!important}
+ .jp-tick{width:29px;height:29px;right:7px;top:7px}
+ .jp-header p,.jp-hint{font-size:17px}
+ .jp-mobile-summary{padding:16px}
+}
+@media(max-width:350px){
+ .jp-interest-grid{grid-template-columns:minmax(0,1fr)}
+ .jp-interest img{height:165px}
+ .jp-steps button{font-size:11px!important}
+ .jp-header h2,html[lang=mr] #trip-planner h2{font-size:26px}
+}
+/* Readable supporting website copy on phones, in both languages. */
+@media(max-width:600px){
+ .heading p,html[lang=mr] .heading p,.cardbody>p,html[lang=mr] .cardbody>p,
+ .service p,html[lang=mr] .service p,.story p,html[lang=mr] .story p,
+ .feature p,html[lang=mr] .feature p,.hero p,html[lang=mr] .hero p,
+ .experience-copy p,html[lang=mr] .experience-copy p,.stay-banner p{font-size:17px;line-height:1.95}
+ .stops,html[lang=mr] .stops{font-size:16px;line-height:1.95}
+ .finder label,html[lang=mr] .finder label{font-size:14px}
+ .introbar,.notice,.season-note,.slider-tools p{font-size:15px;line-height:1.85}
+ .price small,html[lang=mr] .price small,.region,html[lang=mr] .region{font-size:14px}
+ .textbutton,html[lang=mr] .textbutton{font-size:16px}
+}
