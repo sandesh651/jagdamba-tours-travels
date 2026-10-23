@@ -1,0 +1,7 @@
+/* Selected coastal logo, shared by both languages. */
+.brand{flex-shrink:0;max-width:100%}
+.brand-logo{display:block;width:240px;height:auto;object-fit:contain}
+footer .brand-logo{width:260px}
+@media(max-width:1150px){header .brand-logo{width:205px}}
+@media(max-width:600px){header .brand-logo{width:190px}}
+@media(max-width:380px){header .brand-logo{width:160px}.nav{column-gap:8px}}
