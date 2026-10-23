@@ -25,3 +25,11 @@ Commit index.html, mr.html, the catalogue and shared language assets together. T
 ## Business information
 
 11 proposed circuits, automatic experience/lifestyle sliders and 3–4 captioned destination photos per circuit. Packages, services and ₹5,999 starting prices require business confirmation. The enquiry form prepares text locally; no booking, payment or enquiry backend is configured. Photography credits remain on the website; source dimensions vary. Google Fonts requires internet access.
+
+## Guided trip planner
+
+Shared `assets/trip-planner.js` and CSS provide English/Marathi interest cards, optional activities, multiple destinations, stay/facility and food choices, dates and travellers, transport, budget and an editable summary. Package detail links preselect their circuit. Vehicle-only enquiries skip accommodation.
+
+The planner prepares a copyable/downloadable UTF-8 enquiry locally. It sends no enquiry and takes no payment. A verified business destination must be configured before adding direct delivery. Selections are placed in sessionStorage only on a language switch, then consumed on the next page; contact details are not persistently saved. All proposed services remain subject to business confirmation.
+
+Run `python scripts/build-marathi.py` after English layout or catalogue edits. The planner itself owns its paired translations and stable selection IDs.
