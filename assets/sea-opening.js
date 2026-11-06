@@ -2,7 +2,7 @@
   const opening = document.querySelector('.sea-opening');
   if (!opening || !('IntersectionObserver' in window)) return;
   const hero = opening.querySelector('.hero');
-  const shore = opening.querySelector('.sea-shore');
+  const forest = opening.querySelector('.sea-shore');
   const button = opening.querySelector('.sea-guide');
   const label = button.querySelector('span');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -10,8 +10,8 @@
   const smooth = n => { n = clamp(n); return n * n * (3 - 2 * n); };
   let visible = false, frame = 0, preview = false;
   const words = document.documentElement.lang === 'mr'
-    ? ['किनारा पाहा', 'पुन्हा समुद्राकडे']
-    : ['Reveal the coast', 'Back to open water'];
+    ? ['वनराई पाहा', 'पुन्हा किनाऱ्याकडे']
+    : ['Reveal the forest', 'Back to the shore'];
   function update() {
     frame = 0;
     if (!visible || motion.matches || !opening.classList.contains('is-cinematic')) return;
@@ -29,7 +29,7 @@
   }
   function queue() { if (visible && !frame) frame = requestAnimationFrame(update); }
   function sync() {
-    opening.classList.toggle('is-cinematic', !motion.matches && shore.complete && shore.naturalWidth > 0);
+    opening.classList.toggle('is-cinematic', !motion.matches && forest.complete && forest.naturalWidth > 0);
     queue();
   }
   new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; queue(); }).observe(opening);
@@ -52,8 +52,8 @@
     queue();
   }, {passive:true});
   window.addEventListener('resize', queue, {passive:true});
-  shore.addEventListener('load', sync);
-  shore.addEventListener('error', sync);
+  forest.addEventListener('load', sync);
+  forest.addEventListener('error', sync);
   motion.addEventListener('change', sync);
   sync();
 })();
