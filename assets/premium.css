@@ -22,3 +22,213 @@ html[lang=mr] .navlinks a{font-size:15px}html[lang=mr] .brand strong{font-size:2
 @media(prefers-reduced-transparency:reduce){.finder,.packages-intro,.card,.service,.discovery-strip{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}}
 /* Keep informational fine print readable alongside the larger body type. */
 .plan p[style*="font-size:11px"],.stay-banner p[style*="font-size:11px"]{font-size:14px!important;line-height:1.8}
+
+
+/* Midnight Konkan glass theme */
+:root{
+  --paper:#071b18;
+  --ink:#eaf5ef;
+  --muted:#a8c4b6;
+  --line:#8bb8a466;
+  --orange:#f47a4d;
+  --gold:#ffd08e;
+}
+html{background:#071b18}
+body{
+  background-color:#071b18;
+  background-image:
+    radial-gradient(ellipse at 8% 0%,#1d5a4c80 0,transparent 34%),
+    radial-gradient(ellipse at 92% 20%,#7b422d55 0,transparent 28%),
+    radial-gradient(ellipse at 50% 100%,#0d403555 0,transparent 42%),
+    linear-gradient(135deg,#061714,#0a2420 52%,#071b18);
+  color:var(--ink);
+}
+.top{
+  background:linear-gradient(90deg,#041311,#0b332c 50%,#041311);
+  border-bottom:1px solid #9ac9b036;
+  color:#f0fff6;
+}
+.nav{
+  background:rgba(4,20,18,.72);
+  border:1px solid #a7d7bd1c;
+  border-top:0;
+  border-radius:0 0 22px 22px;
+  box-shadow:0 18px 45px #00000035,inset 0 1px 0 #ffffff12;
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+.navlinks a{color:#e2f1e9}
+.navlinks a:after{background:var(--gold)}
+.language-switch{
+  background:rgba(2,17,15,.62);
+  border:1px solid #a7d7bd35;
+  box-shadow:inset 0 1px 0 #ffffff12;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.language-switch a{color:#c9e0d4}
+.language-switch a[aria-current=page]{background:linear-gradient(135deg,#1e5f50,#123d35);color:#fff;box-shadow:0 7px 18px #00000030}
+.btn{
+  background:linear-gradient(135deg,#f47a4d,#d95334);
+  box-shadow:0 10px 26px #d9533440,inset 0 1px 0 #ffffff35;
+}
+.btn:hover{background:linear-gradient(135deg,#ff8a5b,#e3613c)}
+.btn.light{
+  background:rgba(235,251,242,.12);
+  border:1px solid #b7dfca45;
+  color:#effaf3;
+}
+.btn.outline{border-color:#a7d7bd55;color:var(--ink)}
+.hero{
+  border:1px solid #b9e2ca25;
+  box-shadow:0 25px 75px #00000055,0 0 0 1px #ffffff08 inset;
+}
+.hero:after{
+  background:
+    linear-gradient(90deg,rgba(2,20,18,.9),rgba(2,20,18,.32) 57%,rgba(2,20,18,.14)),
+    linear-gradient(0deg,rgba(2,20,18,.68),transparent 42%);
+}
+.hero .eyebrow{border-color:#d9f7e277;color:#f4fff8;background:#06221c40}
+.hero p{color:#e2f1e8}
+.herofoot{color:#e0f1e8}
+.finder{
+  background:rgba(7,30,26,.72);
+  border-color:#b7dfca35;
+  box-shadow:0 20px 65px #0000003d,inset 0 1px 0 #ffffff18;
+  color:var(--ink);
+}
+.finder label,.finder-label{color:#aacbbc}
+.finder select{
+  background-color:rgba(236,253,243,.08);
+  border-color:#91bea64d;
+  color:#edf9f1;
+  box-shadow:inset 0 1px 5px #00000022,0 0 0 1px #ffffff05;
+}
+.finder select option{background:#102b26;color:#edf9f1}
+.finder select:focus{border-color:#f2bf7f}
+.finder-budget small,.budget-note{color:#a9c6b7}
+.introbar{color:#b4d0c1}
+.introbar span:before{color:var(--gold)}
+.packages-intro{
+  background:rgba(9,35,30,.68);
+  border-color:#b7dfca24;
+  box-shadow:0 18px 55px #0000002e,inset 0 1px 0 #ffffff14;
+}
+.packages-title .eyebrow{color:#ffc17f}
+.packages-title h2{color:#f0faf4}
+.heading.packages-intro .packages-summary{border-color:#e7bc765c;color:#b9d1c4}
+.escapes-toolbar{border-bottom-color:#8bb8a444}
+.escapes-total{color:#a9c6b7}
+.escapes-toolbar .chip{
+  background:rgba(236,253,243,.06);
+  border-color:#9bc8ad48;
+  color:#e7f4ed;
+}
+.escapes-toolbar .chip.active,.chip.active{background:linear-gradient(135deg,#1c5d4d,#123e35);border-color:#7fb49a;color:#fff}
+.card{
+  background:rgba(8,32,28,.74);
+  border-color:#b7dfca2b;
+  box-shadow:0 12px 35px #00000038,inset 0 1px 0 #ffffff12;
+}
+.card:hover{box-shadow:0 22px 52px #00000055,0 0 0 1px #e7bd7840}
+.cardbody{color:#e7f4ed}
+.region{color:#a9c8b8}
+.cardbody>p{color:#b7cec1}
+.stops{border-color:#7fae9a55;color:#b5cdbf}
+.stops b{color:#ffb977}
+.price{border-color:#7fae9a55}
+.textbutton{color:#eff9f2}
+.cardpic .badge{
+  background:rgba(4,22,19,.72);
+  border-color:#d7f2e077;
+  color:#effaf4;
+  box-shadow:0 6px 18px #00000030;
+}
+.notice{color:#a9c5b7}
+.story{
+  background:
+    radial-gradient(ellipse at 12% 0%,#1a584b88,transparent 48%),
+    linear-gradient(135deg,#0b2a24,#102f28);
+  border-color:#9bcbb330;
+}
+.story p,.feature p{color:#b8d0c1}
+.feature{border-color:#7fae9a55}
+.feature b{color:#edf8f0}
+.services{color:var(--ink)}
+.service{
+  background:rgba(9,35,30,.68);
+  border-color:#b7dfca2b;
+  box-shadow:0 10px 32px #00000030,inset 0 1px 0 #ffffff10;
+}
+.service h3{color:#eff9f2}
+.service p{color:#b5cdbf}
+.service span{color:#ffbd7c}
+.experience-tile{
+  border:1px solid #b7dfca2b;
+  box-shadow:0 16px 40px #0000003d;
+}
+.experience-tile:after{background:linear-gradient(transparent 8%,#031c17f2)}
+.experience-copy p{color:#d3e7db}
+.discovery-strip{
+  background:rgba(9,35,30,.72);
+  border-color:#b7dfca2b;
+  box-shadow:0 15px 38px #00000035,inset 0 1px 0 #ffffff12;
+}
+.discovery-strip span{color:#b8d0c1}
+.season-note{
+  background:rgba(11,39,33,.82);
+  border-color:#f2a66a;
+  color:#c2d9cb;
+}
+.gallery figure{border:1px solid #b7dfca22;box-shadow:0 14px 35px #00000035}
+.slider-tools p{color:#abc7b8}
+.slider-buttons button,.experience-controls button{
+  border-color:#8bb8a455;
+  background:rgba(8,31,27,.64);
+  color:#eaf6ef;
+}
+.slider-buttons button:hover,.experience-controls button:hover{background:#1c5d4d;color:#fff}
+.stay-banner{
+  background:linear-gradient(135deg,rgba(11,43,36,.86),rgba(39,43,28,.78));
+  border-color:#b7dfca2b;
+  box-shadow:0 16px 42px #00000038;
+}
+.stay-banner p{color:#bfd7c8}
+.plan{
+  background:linear-gradient(135deg,#0b3028,#071f1b 65%,#164c3d);
+  border-color:#6eaa8e66;
+  box-shadow:0 24px 65px #0000004a;
+}
+.plan p{color:#c4dbce}
+.plan input,.plan select,.plan textarea{
+  border-color:#7eae985f;
+  background:#ffffff0b;
+  color:#effaf2;
+}
+.plan select option{background:#102b26;color:#edf9f1}
+details{border-color:#7fae9a55}
+summary{color:#eaf6ef}
+details p{color:#b6cec0}
+dialog{
+  background:#0b2822;
+  border:1px solid #b7dfca3b;
+  box-shadow:0 25px 80px #00000070;
+  color:#edf8f1;
+}
+dialog .close{color:#eaf6ef}
+.routeitem{border-color:#7fae9a55}
+.routeitem p{color:#b6cec0}
+.routeitem span,.orange{color:#ffbd7c}
+footer{
+  background:linear-gradient(180deg,#071c18,#04110f);
+  border-color:#7fae9a44;
+}
+footer p,.preview{color:#9fbcae}
+a{color:inherit}
+@media(prefers-reduced-transparency:reduce){
+  .nav,.language-switch,.finder,.packages-intro,.card,.service,.discovery-strip,.stay-banner,.season-note,.slider-buttons button,.experience-controls button{
+    background:#0b2822;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+}
