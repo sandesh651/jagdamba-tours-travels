@@ -1,0 +1,97 @@
+/* Phone readability, including wide desktop-mode viewports on touch phones.
+   vw sizing compensates for the browser's desktop-page shrink-to-fit. */
+@media (max-width:700px), (pointer:coarse) and (max-device-width:700px) {
+ :root{--phone-body:clamp(18px,4.6vw,46px);--phone-small:clamp(16px,4vw,40px);--phone-gap:clamp(18px,4.5vw,45px)}
+ html{scroll-padding-top:20px}
+ body{font-size:var(--phone-body);overflow-wrap:break-word}
+ .wrap{width:100%;max-width:100%;padding-inline:var(--phone-gap)}
+ html body .top{font-size:clamp(12px,3.1vw,31px);line-height:1.7;padding:clamp(9px,2.3vw,23px);letter-spacing:.4px}
+ html body .nav{height:auto;min-height:0;padding:var(--phone-gap);gap:clamp(12px,3vw,30px);flex-wrap:wrap}
+ .navlinks{display:none!important}
+ html body .brand-logo{width:clamp(160px,40vw,400px);height:auto;max-width:100%}
+ .nav .brand{max-width:100%;min-width:0}
+ .nav-actions{margin-left:auto;display:flex;align-items:center;flex-wrap:wrap;gap:clamp(10px,2.5vw,25px)}
+ html body .language-switch a,html body .nav-actions>.btn{font-size:var(--phone-small);padding:clamp(10px,2.5vw,25px);min-height:44px}
+ html body .hero{margin:0 var(--phone-gap);min-height:0;border-radius:clamp(15px,4vw,40px)}
+ html body .herotext{width:100%;padding:clamp(36px,9vw,90px) clamp(22px,5.5vw,55px) clamp(48px,12vw,120px)!important}
+ html body .hero h1{font-size:clamp(42px,10.5vw,105px);line-height:1.16;max-width:none;margin:clamp(22px,5.5vw,55px) 0}
+ html body .hero .eyebrow,html body .eyebrow{font-size:clamp(13px,3.3vw,33px);line-height:1.7;letter-spacing:.6px}
+ html body .hero p,html body .heading p,html body .packages-summary,
+ html body .cardbody>p,html body .stops,html body .story p,html body .feature p,
+ html body .service p,html body .experience-copy p,html body .stay-banner p,
+ html body details p,html body .notice,html body .season-note,
+ html body .slider-tools p,html body .ja-copy p,html body #about p,
+ html body footer p,html body footer a{font-size:var(--phone-body);line-height:1.85;max-width:none}
+ html body .herofoot{display:none}
+ html body .btn,html body .textbutton,html body .experience-link{font-size:var(--phone-body);line-height:1.6;padding:clamp(13px,3.3vw,33px) clamp(18px,4.5vw,45px);min-height:48px}
+ html body h2,html body .packages-title h2{font-size:clamp(32px,8vw,80px);line-height:1.45;letter-spacing:0}
+ html body .finder{margin:var(--phone-gap);max-width:none;padding:var(--phone-gap);grid-template-columns:minmax(0,1fr);gap:var(--phone-gap)}
+ .finder>div,.finder>.btn{grid-column:1/-1}
+ html body .finder label,html body .finder-label,html body .region,
+ html body .cardpic .badge,html body .escapes-total,
+ html body .introbar,html body .discovery-strip span,
+ html body .image-credits summary,html body .image-credits p,
+ html body .preview,html body .gallery figcaption small{font-size:var(--phone-small);line-height:1.8;letter-spacing:.3px}
+ html body .finder select{font-size:var(--phone-body);line-height:1.6;min-height:clamp(52px,13vw,130px);padding:clamp(13px,3.3vw,33px)}
+ html body .introbar{display:flex;flex-direction:column;gap:clamp(10px,2.5vw,25px);padding:var(--phone-gap);text-align:center}
+ html body .packages-intro{display:block;padding:clamp(24px,6vw,60px);margin-bottom:var(--phone-gap)}
+ html body .heading.packages-intro .packages-summary{border-left:0;border-top:1px solid var(--line);margin-top:var(--phone-gap);padding:var(--phone-gap) 0 0}
+ .cards{grid-template-columns:minmax(0,1fr)!important;gap:clamp(24px,6vw,60px)}
+ html body .cardpic{height:clamp(250px,66vw,660px)}
+ html body .cardbody{padding:clamp(24px,6vw,60px)}
+ html body .cardbody h3,html body .service h3,html body .stay-banner h3{font-size:clamp(27px,6.8vw,68px);line-height:1.5}
+ html body .cardpic .badge{padding:clamp(8px,2vw,20px) clamp(12px,3vw,30px)}
+ html body .photo-caption,html body .gallery figcaption{font-size:var(--phone-body);line-height:1.6}
+ html body .escapes-toolbar{gap:var(--phone-gap);flex-wrap:wrap}
+ html body .escapes-toolbar .chip{font-size:var(--phone-body);padding:clamp(12px,3vw,30px) clamp(18px,4.5vw,45px)}
+ html body .escapes-total{max-width:none}
+ html body .split,html body .stay-banner,html body .ja-grid,html body .ja-footer-grid{grid-template-columns:minmax(0,1fr);gap:var(--phone-gap)}
+ html body .storyimg{height:clamp(320px,85vw,850px)}
+ html body .feature b{font-size:var(--phone-body)}
+ html body .services{grid-template-columns:minmax(0,1fr);gap:var(--phone-gap)}
+ html body .service{padding:clamp(22px,5.5vw,55px)}
+ html body .experience-grid .experience-tile{flex-basis:100%;min-height:clamp(610px,155vw,1550px);aspect-ratio:auto}
+ html body .experience-copy{padding:clamp(24px,6vw,60px)}
+ html body .experience-copy h3{font-size:clamp(30px,7.5vw,75px);line-height:1.5}
+ html body .experience-controls span,html body .experience-controls button{font-size:var(--phone-small)}
+ html body .gallery figure,html body .gallery figure:first-child{flex-basis:90%;height:clamp(440px,110vw,1100px)}
+ html body .slider-tools{flex-wrap:wrap;gap:var(--phone-gap)}
+ html body .slider-buttons button{width:clamp(48px,12vw,120px);height:clamp(48px,12vw,120px);font-size:var(--phone-body)}
+ html body .discovery-strip{gap:var(--phone-gap);padding:var(--phone-gap);flex-wrap:wrap}
+ html body summary{font-size:var(--phone-body);line-height:1.7}
+ html body dialog{width:calc(100% - var(--phone-gap)*2);max-width:none;padding:var(--phone-gap)}
+ html body .routeitem b,html body .routeitem p{font-size:var(--phone-body)}
+ html body .routeitem small,html body .routeitem span{font-size:var(--phone-small)}
+ html body footer .wrap{display:block}
+ /* Planner choices and helper text use the same readable mobile scale. */
+ html body #trip-planner{font-size:var(--phone-body)}
+ html body .jp-layout{display:flex;flex-direction:column;padding:var(--phone-gap);gap:var(--phone-gap)}
+ html body .jp-form{width:100%;min-width:0}
+ html body .jp-summary{display:none}
+ html body .jp-mobile-summary{display:block;order:2;width:100%;margin:0;padding:var(--phone-gap)}
+ html body .jp-header{padding:var(--phone-gap)}
+ html body .jp-header-art{display:none}
+ html body #trip-planner h2{font-size:clamp(30px,7.5vw,75px);line-height:1.5}
+ html body #trip-planner h3{font-size:clamp(25px,6.3vw,63px);line-height:1.5}
+ html body #trip-planner .jp-card-copy strong{font-size:var(--phone-body)}
+ html body #trip-planner .jp-card-copy small,html body #trip-planner .jp-hint,
+ html body #trip-planner .jp-footnote,html body #trip-planner .jp-response,
+ html body #trip-planner .jp-header p,html body #trip-planner .jp-summary-row p,
+ html body #trip-planner .jp-delivery,html body #trip-planner .jp-extra>p,
+ html body #trip-planner .jp-destination small{font-size:var(--phone-body);line-height:1.8}
+ html body #trip-planner .jp-kicker,html body #trip-planner .jp-summary-row small,
+ html body #trip-planner .jp-summary-note{font-size:var(--phone-small);line-height:1.8}
+ html body .jp-interest-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,3vw,30px)}
+ html body .jp-interest img{height:clamp(120px,32vw,320px)}
+ html body .jp-card-copy{padding:clamp(12px,3vw,30px)}
+ html body .jp-modes{display:flex;flex-direction:column}
+ html body #trip-planner button,html body #trip-planner .jp-chip,
+ html body #trip-planner .jp-summary-row button{font-size:var(--phone-body)!important;line-height:1.7;min-height:clamp(48px,12vw,120px)}
+ html body .jp-tick{width:clamp(28px,7vw,70px);height:clamp(28px,7vw,70px)}
+ html body .jp-steps{display:flex;overflow-x:auto;gap:var(--phone-gap);padding:var(--phone-gap)}
+ html body #trip-planner .jp-steps button{flex:none;flex-direction:row;white-space:nowrap;font-size:var(--phone-small)!important}
+ html body .jp-fields{grid-template-columns:minmax(0,1fr);gap:var(--phone-gap)}
+ html body .jp-fields label,html body .jp-form legend{font-size:var(--phone-body)}
+ html body #trip-planner input,html body #trip-planner select,html body #trip-planner textarea{font-size:var(--phone-body)!important;padding:clamp(12px,3vw,30px)}
+ html body #jp-draft{font-size:var(--phone-small)}
+}
