@@ -21,3 +21,28 @@ body{background:#faf8f2;background-image:radial-gradient(ellipse at 0 8%,#def1eb
 @media(max-width:1050px){.cinema-orbit{display:none}.hero h1{letter-spacing:-1.2px}.cinema-scroll{left:35px}}
 @media(max-width:700px),(pointer:coarse) and (max-device-width:700px){html body .hero{border-radius:22px}.hero>img{object-position:62% center}.hero:after{background:linear-gradient(90deg,#082f36c9,#082f364d),linear-gradient(0deg,#092f37a8,transparent)}html body .hero h1{letter-spacing:-1px;line-height:1.12}html[lang=mr] body .hero h1{letter-spacing:0;line-height:1.45}.cinema-scroll,.cinema-orbit{display:none}html body .packages-intro{padding:12px 0 22px}html body .packages-title h2{line-height:1.3}html[lang=mr] body .packages-title h2{line-height:1.6}.storyimg{box-shadow:8px 8px 0 #d5dfce}.cardpic .badge{max-width:calc(100% - 36px)}.service:hover,.card:hover{transform:none}.finder{box-shadow:0 10px 30px #21443b10}}
 @media(prefers-reduced-motion:reduce){.cinema-scroll i:after{animation:none}.hero>img{transform:none!important;transition:none}.card,.service{transition:none}}
+
+/* Two-column phone destinations with tactile depth and readable text.
+   vw values also compensate for phones using a desktop-width viewport. */
+@media(max-width:700px),(pointer:coarse) and (max-device-width:700px){
+ html body #packages>.wrap{padding-inline:clamp(12px,3vw,30px)}
+ html body #packages .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(18px,4.5vw,45px) clamp(12px,3vw,30px);align-items:stretch;perspective:1200px}
+ html body #packages .card{min-width:0;overflow:hidden;border-radius:clamp(14px,3.5vw,35px);border:1px solid #fff;background:linear-gradient(145deg,#fffefa,#f4f7ef);box-shadow:0 2px 0 #d5dfd3,0 5px 0 -1px #e1e7db,0 12px 22px -10px #173e3850;transform:translateZ(0);transition:transform .25s ease,box-shadow .25s ease}
+ html body #packages .card:active{transform:translateY(3px) rotateX(1deg);box-shadow:0 1px 0 #d5dfd3,0 5px 12px -6px #173e3840}
+ html body #packages .cardpic{height:clamp(165px,43vw,430px)}
+ html body #packages .cardbody{padding:clamp(12px,3vw,30px);gap:0}
+ html body #packages .region{font-size:clamp(12px,3.1vw,31px);letter-spacing:.2px;line-height:1.65;overflow-wrap:anywhere}
+ html body #packages .cardbody h3{font-size:clamp(21px,5.3vw,53px);line-height:1.35;margin:clamp(10px,2.5vw,25px) 0;overflow-wrap:normal}
+ html[lang=mr] body #packages .cardbody h3{font-size:clamp(20px,5vw,50px);line-height:1.6}
+ html body #packages .cardbody>p,html body #packages .stops{font-size:clamp(16px,4vw,40px);line-height:1.75;overflow-wrap:break-word}
+ html body #packages .cardbody>p{margin-bottom:clamp(12px,3vw,30px)}
+ html body #packages .stops{padding:clamp(12px,3vw,30px) 0}
+ html body #packages .price{padding-top:clamp(10px,2.5vw,25px);gap:0}
+ html body #packages .price .textbutton{font-size:clamp(16px,4vw,40px);line-height:1.6;min-height:44px;padding:8px 0;white-space:normal}
+ html body #packages .cardpic .badge{font-size:clamp(11px,2.8vw,28px);line-height:1.5;letter-spacing:0;left:clamp(8px,2vw,20px);top:clamp(8px,2vw,20px);max-width:calc(100% - 16px);padding:clamp(5px,1.3vw,13px) clamp(8px,2vw,20px);border-radius:8px}
+ html body #packages .photo-caption{font-size:clamp(14px,3.5vw,35px);line-height:1.5;padding:30px clamp(10px,2.5vw,25px) clamp(24px,6vw,60px);overflow-wrap:break-word}
+ html body #packages .photo-dots{right:auto;left:clamp(10px,2.5vw,25px);bottom:clamp(10px,2.5vw,25px)}
+ html body #packages .photo-dots i{width:clamp(5px,1.3vw,13px);height:clamp(5px,1.3vw,13px)}
+ html body #packages .photo-dots i.active{width:clamp(14px,3.5vw,35px)}
+}
+@media(prefers-reduced-motion:reduce){html body #packages .card{transition:none}html body #packages .card:active{transform:none}}
