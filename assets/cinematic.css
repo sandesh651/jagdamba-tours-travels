@@ -46,3 +46,10 @@ body{background:#faf8f2;background-image:radial-gradient(ellipse at 0 8%,#def1eb
  html body #packages .photo-dots i.active{width:clamp(14px,3.5vw,35px)}
 }
 @media(prefers-reduced-motion:reduce){html body #packages .card{transition:none}html body #packages .card:active{transform:none}}
+
+/* A restrained 3D hover complements the scroll entrance on pointer devices. */
+@media (min-width:701px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ html body #packages .card{transform-origin:center center;transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s,border-color .4s}
+ html body #packages .card:hover{transform:perspective(1200px) translateY(-8px) rotateX(1.5deg) rotateY(-1deg);box-shadow:0 26px 48px -12px #183e3838;border-color:#c5d6c8}
+}
+@media (prefers-reduced-motion:reduce){html body #packages .card:hover{transform:none}}
